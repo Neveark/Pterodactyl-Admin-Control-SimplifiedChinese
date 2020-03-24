@@ -6,7 +6,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    List Users
+    用户列表
 @endsection
 
 @section('content-header')

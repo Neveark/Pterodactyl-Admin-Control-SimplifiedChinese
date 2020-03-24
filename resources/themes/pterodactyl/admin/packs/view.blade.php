@@ -6,14 +6,14 @@
 @extends('layouts.admin')
 
 @section('title')
-    Packs &rarr; View &rarr; {{ $pack->name }}
+    包 &rarr; 新 &rarr; {{ $pack->name }}
 @endsection
 
 @section('content-header')
     <h1>{{ $pack->name }}<small>{{ str_limit($pack->description, 60) }}</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
-        <li><a href="{{ route('admin.packs') }}">Packs</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
+        <li><a href="{{ route('admin.packs') }}">包</a></li>
         <li class="active">{{ $pack->name }}</li>
     </ol>
 @endsection
@@ -24,7 +24,7 @@
         <div class="col-md-6">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Pack Details</h3>
+                    <h3 class="box-title">包详情</h3>
                 </div>
                 <div class="box-body">
                     <div class="form-group">

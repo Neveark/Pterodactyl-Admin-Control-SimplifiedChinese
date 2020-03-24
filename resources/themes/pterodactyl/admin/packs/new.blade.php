@@ -6,15 +6,15 @@
 @extends('layouts.admin')
 
 @section('title')
-    Packs &rarr; New
+    包 &rarr; 新
 @endsection
 
 @section('content-header')
-    <h1>New Pack<small>Create a new pack on the system.</small></h1>
+    <h1>新包<small>于此系统上创建一个新的包。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
-        <li><a href="{{ route('admin.packs') }}">Packs</a></li>
-        <li class="active">New</li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
+        <li><a href="{{ route('admin.packs') }}">包</a></li>
+        <li class="active">新</li>
     </ol>
 @endsection
 
@@ -23,8 +23,8 @@
     <div class="col-xs-12">
         <div class="nav-tabs-custom nav-tabs-floating">
             <ul class="nav nav-tabs">
-                <li class="active"><a href="{{ route('admin.packs.new') }}">Configure Manually</a></li>
-                <li><a href="#modal" id="toggleModal">Install From Template</a></li>
+                <li class="active"><a href="{{ route('admin.packs.new') }}">手动配置</a></li>
+                <li><a href="#modal" id="toggleModal">从模板安装</a></li>
             </ul>
         </div>
     </div>

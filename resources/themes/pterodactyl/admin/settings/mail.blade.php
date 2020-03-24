@@ -2,7 +2,7 @@
 @include('partials/admin.settings.nav', ['activeTab' => 'mail'])
 
 @section('title')
-    Mail Settings
+    邮件设置
 @endsection
 
 @section('content-header')
@@ -26,7 +26,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="alert alert-info no-margin-bottom">
-                                    This interface is limited to instances using SMTP as the mail driver. Please either use <code>php artisan p:environment:mail</code> command to update your email settings, or set <code>MAIL_DRIVER=smtp</code> in your environment file.
+                                此接口仅限于使用SMTP作为邮件驱动程序的实例。请使用<code>php artisan p:environment:mail</code>命令更新您的电子邮件设置，或者在您的环境文件中设置<code>MAIL_DRIVER = smtp</code>。
                                 </div>
                             </div>
                         </div>

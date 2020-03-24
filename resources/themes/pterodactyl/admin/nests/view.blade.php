@@ -6,14 +6,14 @@
 @extends('layouts.admin')
 
 @section('title')
-    Nests &rarr; {{ $nest->name }}
+    巢 &rarr; {{ $nest->name }}
 @endsection
 
 @section('content-header')
     <h1>{{ $nest->name }}<small>{{ str_limit($nest->description, 50) }}</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
-        <li><a href="{{ route('admin.nests') }}">Nests</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
+        <li><a href="{{ route('admin.nests') }}">巢</a></li>
         <li class="active">{{ $nest->name }}</li>
     </ol>
 @endsection
@@ -25,7 +25,7 @@
             <div class="box">
                 <div class="box-body">
                     <div class="form-group">
-                        <label class="control-label">Name <span class="field-required"></span></label>
+                        <label class="control-label">名称 <span class="field-required"></span></label>
                         <div>
                             <input type="text" name="name" class="form-control" value="{{ $nest->name }}" />
                             <p class="text-muted"><small>This should be a descriptive category name that encompasses all of the options within the service.</small></p>

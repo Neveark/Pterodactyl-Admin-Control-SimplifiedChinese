@@ -6,7 +6,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    Create User
+    创建用户
 @endsection
 
 @section('content-header')

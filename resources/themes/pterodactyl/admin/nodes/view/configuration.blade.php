@@ -6,7 +6,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    {{ $node->name }}: Configuration
+    {{ $node->name }}: 配置
 @endsection
 
 @section('content-header')

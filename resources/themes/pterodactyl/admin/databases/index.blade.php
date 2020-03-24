@@ -6,7 +6,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    Database Hosts
+    数据库主机
 @endsection
 
 @section('content-header')

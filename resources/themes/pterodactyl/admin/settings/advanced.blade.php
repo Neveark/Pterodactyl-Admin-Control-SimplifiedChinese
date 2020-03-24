@@ -2,7 +2,7 @@
 @include('partials/admin.settings.nav', ['activeTab' => 'advanced'])
 
 @section('title')
-    Advanced Settings
+    高级设置
 @endsection
 
 @section('content-header')

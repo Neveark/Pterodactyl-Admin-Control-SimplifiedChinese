@@ -6,7 +6,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    服务器 — {{ $server->name }}: Databases
+    服务器 — {{ $server->name }}: 数据库
 @endsection
 
 @section('content-header')

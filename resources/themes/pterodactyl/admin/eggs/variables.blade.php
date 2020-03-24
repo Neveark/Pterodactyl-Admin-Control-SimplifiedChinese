@@ -6,17 +6,17 @@
 @extends('layouts.admin')
 
 @section('title')
-    Egg &rarr; {{ $egg->name }} &rarr; Variables
+    Egg &rarr; {{ $egg->name }} &rarr; 变量
 @endsection
 
 @section('content-header')
-    <h1>{{ $egg->name }}<small>Managing variables for this Egg.</small></h1>
+    <h1>{{ $egg->name }}<small>管理此 Egg 的变量。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
-        <li><a href="{{ route('admin.nests') }}">Nests</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
+        <li><a href="{{ route('admin.nests') }}">巢</a></li>
         <li><a href="{{ route('admin.nests.view', $egg->nest->id) }}">{{ $egg->nest->name }}</a></li>
         <li><a href="{{ route('admin.nests.egg.view', $egg->id) }}">{{ $egg->name }}</a></li>
-        <li class="active">Variables</li>
+        <li class="active">变量</li>
     </ol>
 @endsection
 

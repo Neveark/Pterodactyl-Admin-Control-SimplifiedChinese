@@ -6,7 +6,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    List Servers
+    服务器列表
 @endsection
 
 @section('content-header')

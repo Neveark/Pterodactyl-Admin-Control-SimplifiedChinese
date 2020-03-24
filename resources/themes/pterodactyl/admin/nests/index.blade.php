@@ -6,14 +6,14 @@
 @extends('layouts.admin')
 
 @section('title')
-    Nests
+    巢
 @endsection
 
 @section('content-header')
-    <h1>Nests<small>All nests currently available on this system.</small></h1>
+    <h1>巢<small>此系统上所有可用的巢。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
-        <li class="active">Nests</li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
+        <li class="active">巢</li>
     </ol>
 @endsection
 

@@ -6,7 +6,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    List Packs
+    包列表
 @endsection
 
 @section('content-header')

@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    Application API
+    应用程序 API
 @endsection
 
 @section('content-header')

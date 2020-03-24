@@ -6,15 +6,15 @@
 @extends('layouts.admin')
 
 @section('title')
-    Nests &rarr; New Egg
+    巢 &rarr; 新 Egg
 @endsection
 
 @section('content-header')
-    <h1>New Egg<small>Create a new Egg to assign to servers.</small></h1>
+    <h1>新 Egg<small>创建一个新 Egg 来关联到服务器。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
-        <li><a href="{{ route('admin.nests') }}">Nests</a></li>
-        <li class="active">New Egg</li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
+        <li><a href="{{ route('admin.nests') }}">巢</a></li>
+        <li class="active">新 Egg</li>
     </ol>
 @endsection
 
@@ -24,7 +24,7 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Configuration</h3>
+                    <h3 class="box-title">配置</h3>
                 </div>
                 <div class="box-body">
                     <div class="row">

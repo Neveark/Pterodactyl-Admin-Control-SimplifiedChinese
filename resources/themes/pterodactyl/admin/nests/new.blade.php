@@ -6,15 +6,15 @@
 @extends('layouts.admin')
 
 @section('title')
-    New Nest
+    新巢
 @endsection
 
 @section('content-header')
-    <h1>New Nest<small>Configure a new nest to deploy to all nodes.</small></h1>
+    <h1>新巢<small>配置一个用于部署到所有节点的新巢。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
-        <li><a href="{{ route('admin.nests') }}">Nests</a></li>
-        <li class="active">New</li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
+        <li><a href="{{ route('admin.nests') }}">巢</a></li>
+        <li class="active">新</li>
     </ol>
 @endsection
 
@@ -24,7 +24,7 @@
         <div class="col-md-12">
             <div class="box">
                 <div class="box-header with-border">
-                    <h3 class="box-title">New Nest</h3>
+                    <h3 class="box-title">新巢</h3>
                 </div>
                 <div class="box-body">
                     <div class="form-group">

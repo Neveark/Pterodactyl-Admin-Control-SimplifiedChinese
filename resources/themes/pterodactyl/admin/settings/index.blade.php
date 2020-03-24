@@ -2,7 +2,7 @@
 @include('partials/admin.settings.nav', ['activeTab' => 'basic'])
 
 @section('title')
-    Settings
+    设置
 @endsection
 
 @section('content-header')

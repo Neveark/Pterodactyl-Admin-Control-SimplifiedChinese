@@ -6,7 +6,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    服务器 — {{ $server->name }}: Build Details
+    服务器 — {{ $server->name }}: 构建详情
 @endsection
 
 @section('content-header')

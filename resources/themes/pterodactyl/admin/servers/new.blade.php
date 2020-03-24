@@ -6,7 +6,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    New Server
+    新服务器
 @endsection
 
 @section('content-header')

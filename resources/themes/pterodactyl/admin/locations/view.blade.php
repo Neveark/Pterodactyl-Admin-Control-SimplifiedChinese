@@ -6,7 +6,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    Locations &rarr; View &rarr; {{ $location->short }}
+    地域 &rarr; 查看 &rarr; {{ $location->short }}
 @endsection
 
 @section('content-header')

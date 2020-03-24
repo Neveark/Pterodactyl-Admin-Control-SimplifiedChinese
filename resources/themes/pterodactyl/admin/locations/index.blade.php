@@ -6,7 +6,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    Locations
+    地域
 @endsection
 
 @section('content-header')
