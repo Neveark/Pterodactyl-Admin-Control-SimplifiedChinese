@@ -6,7 +6,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    List Nodes
+    节点列表
 @endsection
 
 @section('scripts')

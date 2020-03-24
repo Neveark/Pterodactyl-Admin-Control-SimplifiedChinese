@@ -10,12 +10,12 @@
 @endsection
 
 @section('content-header')
-    <h1>{{ $node->name }}<small>Your daemon configuration file.</small></h1>
+    <h1>{{ $node->name }}<small>你的守护进程配置文件。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
-        <li><a href="{{ route('admin.nodes') }}">Nodes</a></li>
+        <li><a href="{{ route('admin.index') }}">管理</a></li>
+        <li><a href="{{ route('admin.nodes') }}">节点</a></li>
         <li><a href="{{ route('admin.nodes.view', $node->id) }}">{{ $node->name }}</a></li>
-        <li class="active">Configuration</li>
+        <li class="active">配置</li>
     </ol>
 @endsection
 
@@ -24,11 +24,11 @@
     <div class="col-xs-12">
         <div class="nav-tabs-custom nav-tabs-floating">
             <ul class="nav nav-tabs">
-                <li><a href="{{ route('admin.nodes.view', $node->id) }}">About</a></li>
-                <li><a href="{{ route('admin.nodes.view.settings', $node->id) }}">Settings</a></li>
-                <li class="active"><a href="{{ route('admin.nodes.view.configuration', $node->id) }}">Configuration</a></li>
-                <li><a href="{{ route('admin.nodes.view.allocation', $node->id) }}">Allocation</a></li>
-                <li><a href="{{ route('admin.nodes.view.servers', $node->id) }}">Servers</a></li>
+                <li><a href="{{ route('admin.nodes.view', $node->id) }}">关于</a></li>
+                <li><a href="{{ route('admin.nodes.view.settings', $node->id) }}">设置</a></li>
+                <li class="active"><a href="{{ route('admin.nodes.view.configuration', $node->id) }}">配置</a></li>
+                <li><a href="{{ route('admin.nodes.view.allocation', $node->id) }}">分配</a></li>
+                <li><a href="{{ route('admin.nodes.view.servers', $node->id) }}">服务器</a></li>
             </ul>
         </div>
     </div>
@@ -37,26 +37,26 @@
     <div class="col-sm-8">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Configuration File</h3>
+                <h3 class="box-title">配置文件</h3>
             </div>
             <div class="box-body">
                 <pre class="no-margin">{{ $node->getConfigurationAsJson(true) }}</pre>
             </div>
             <div class="box-footer">
-                <p class="no-margin">This file should be placed in your daemon's <code>config</code> directory in a file called <code>core.json</code>.</p>
+                <p class="no-margin">该文件应放置在守护程序的<code>config</code>目录中并命名为<code>core.json</code>。</p>
             </div>
         </div>
     </div>
     <div class="col-sm-4">
         <div class="box box-success">
             <div class="box-header with-border">
-                <h3 class="box-title">Auto-Deploy</h3>
+                <h3 class="box-title">自动部署</h3>
             </div>
             <div class="box-body">
-                <p class="text-muted small">To simplify the configuration of nodes it is possible to fetch the config from the panel. A token is required for this process. The button below will generate a token and provide you with the commands necessary for automatic configuration of the node. <em>Tokens are only valid for 5 minutes.</em></p>
+                <p class="text-muted small">为了简化节点的配置，可以从面板中获取配置。此过程需要密钥。下面的按钮将生成一个密钥，并为你提供自动配置节点所需的命令。<em>密钥仅有5分钟的有效期。</em></p>
             </div>
             <div class="box-footer">
-                <button type="button" id="configTokenBtn" class="btn btn-sm btn-default" style="width:100%;">Generate Token</button>
+                <button type="button" id="configTokenBtn" class="btn btn-sm btn-default" style="width:100%;">生成密钥</button>
             </div>
         </div>
     </div>
@@ -70,15 +70,15 @@
         $.getJSON('{{ route('admin.nodes.view.configuration.token', $node->id) }}').done(function (data) {
             swal({
                 type: 'success',
-                title: 'Token created.',
-                text: 'Your token will expire <strong>in 5 minutes.</strong><br /><br />' +
-                      '<p>To auto-configure your node run the following command:<br /><small><pre>npm run configure -- --panel-url {{ config('app.url') }} --token ' + data.token + '</pre></small></p>',
+                title: '密钥已创建。',
+                text: '你的密钥将会在<strong>五分钟</strong>后过期。<br /><br />' +
+                      '<p>运行此命令以自动部署节点：<br /><small><pre>npm run configure -- --panel-url {{ config('app.url') }} --token ' + data.token + '</pre></small></p>',
                 html: true
             })
         }).fail(function () {
             swal({
-                title: 'Error',
-                text: 'Something went wrong creating your token.',
+                title: '错误',
+                text: '创建你的密钥时发生了错误。',
                 type: 'error'
             });
         });

@@ -5,10 +5,10 @@
 @endsection
 
 @section('content-header')
-    <h1>应用程序API<small>控制用来通过API管理此面板的访问凭据。</small></h1>
+    <h1>应用程序 API<small>控制用来通过API管理此面板的访问凭据。</small></h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('admin.index') }}">管理</a></li>
-        <li class="active">应用程序API</li>
+        <li class="active">应用程序 API</li>
     </ol>
 @endsection
 

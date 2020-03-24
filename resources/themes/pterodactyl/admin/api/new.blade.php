@@ -5,10 +5,10 @@
 @endsection
 
 @section('content-header')
-    <h1>应用程序API<small>创建一个新的应用程序API密钥。</small></h1>
+    <h1>应用程序 API<small>创建一个新的应用程序API密钥。</small></h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('admin.index') }}">管理</a></li>
-        <li><a href="{{ route('admin.api.index') }}">应用程序API</a></li>
+        <li><a href="{{ route('admin.api.index') }}">应用程序 API</a></li>
         <li class="active">新凭据</li>
     </ol>
 @endsection

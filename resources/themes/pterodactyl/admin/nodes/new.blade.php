@@ -6,7 +6,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    Nodes &rarr; New
+    节点 &rarr; 创建
 @endsection
 
 @section('content-header')
@@ -28,7 +28,7 @@
                 </div>
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="pName" class="form-label">Name</label>
+                        <label for="pName" class="form-label">名称</label>
                         <input type="text" name="name" id="pName" class="form-control" value="{{ old('name') }}"/>
                         <p class="text-muted small">字符限制：<code>a-zA-Z0-9_.-</code> 以及 <code>[空格]</code> (最小1，最大100字节)。</p>
                     </div>
@@ -62,7 +62,7 @@
                     <div class="form-group">
                         <label for="pFQDN" class="form-label">FQDN</label>
                         <input type="text" name="fqdn" id="pFQDN" class="form-control" value="{{ old('fqdn') }}"/>
-                        <p class="text-muted small">Please enter domain name (e.g <code>node.example.com</code>) to be used for connecting to the daemon. An IP address may be used <em>only</em> if you are not using SSL for this node.</p>
+                        <p class="text-muted small">请输入用于连接到守护进程的FQDN（例如<code>node.example.com</code>）。您<em>只能</em>在不使用SSL时使用IP地址。</p>
                     </div>
                     <div class="form-group">
                         <label class="form-label">通过SSL通信</label>
@@ -77,9 +77,9 @@
                             </div>
                         </div>
                         @if(request()->isSecure())
-                            <p class="text-danger small">Your Panel is currently configured to use a secure connection. In order for browsers to connect to your node it <strong>must</strong> use a SSL connection.</p>
+                            <p class="text-danger small">您的面板当前配置为使用安全连接。为了使浏览器连接到您的节点，它<strong>必须</strong>使用SSL连接。</p>
                         @else
-                            <p class="text-muted small">In most cases you should select to use a SSL connection. If using an IP Address or you do not wish to use SSL at all, select a HTTP connection.</p>
+                            <p class="text-muted small">在大多数情况下，您应该选择使用SSL连接。如果您希望使用IP地址或根本不想使用SSL，请选择HTTP连接。</p>
                         @endif
                     </div>
                     <div class="form-group">
@@ -94,7 +94,7 @@
                                 <label for="pProxyTrue"> 透过代理 </label>
                             </div>
                         </div>
-                        <p class="text-muted small">If you are running the daemon behind a proxy such as Cloudflare, select this to have the daemon skip looking for certificates on boot.</p>
+                        <p class="text-muted small">如果您在诸如CloudFlare之类的代理后面运行守护程序，请选择此项以使守护程序跳过引导时查找证书的操作。</p>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                         <div class="form-group col-md-6">
                             <label for="pDaemonBase" class="form-label">守护进程服务器文件目录</label>
                             <input type="text" name="daemonBase" id="pDaemonBase" class="form-control" value="/srv/daemon-data" />
-                            <p class="text-muted small">Enter the directory where server files should be stored. <strong>If you use OVH you should check your partition scheme. You may need to use <code>/home/daemon-data</code> to have enough space.</strong></p>
+                            <p class="text-muted small">输入用于存储服务器文件的目录。<strong>如果您使用OVH，则应检查分区结构。您可能需要使用<code>/home/daemon-data</code>来确保拥有足够的空间。</strong></p>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="pMemory" class="form-label">总内存</label>
@@ -126,26 +126,26 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <p class="text-muted small">Enter the total amount of memory available for new servers. If you would like to allow overallocation of memory enter the percentage that you want to allow. To disable checking for overallocation enter <code>-1</code> into the field. Entering <code>0</code> will prevent creating new servers if it would put the node over the limit.</p>
+                            <p class="text-muted small">输入可用于新服务器的内存总量。如果要允许内存过度分配，请输入要允许的百分比。要禁用检查是否过度分配，请在字段中输入<code>-1</code>。如果输入<code>0</code>将使节点超过限制时阻止创建新服务器。</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="pDisk" class="form-label">总硬盘空间</label>
+                            <label for="pDisk" class="form-label">总磁盘空间</label>
                             <div class="input-group">
                                 <input type="text" name="disk" data-multiplicator="true" class="form-control" id="pDisk" value="{{ old('disk') }}"/>
                                 <span class="input-group-addon">MB</span>
                             </div>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="pDiskOverallocate" class="form-label">硬盘空间过量分配</label>
+                            <label for="pDiskOverallocate" class="form-label">磁盘空间过量分配</label>
                             <div class="input-group">
                                 <input type="text" name="disk_overallocate" class="form-control" id="pDiskOverallocate" value="{{ old('disk_overallocate') }}"/>
                                 <span class="input-group-addon">%</span>
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <p class="text-muted small">Enter the total amount of disk space available for new servers. If you would like to allow overallocation of disk space enter the percentage that you want to allow. To disable checking for overallocation enter <code>-1</code> into the field. Entering <code>0</code> will prevent creating new servers if it would put the node over the limit.</p>
+                            <p class="text-muted small">输入可用于新服务器的磁盘空间总量。如果要允许磁盘空间过度分配，请输入要允许的百分比。要禁用检查是否过度分配，请在字段中输入<code>-1</code>。如果输入<code>0</code>将使节点超过限制时阻止创建新服务器。</p>
                         </div>
                     </div>
                     <div class="row">
@@ -158,7 +158,7 @@
                             <input type="text" name="daemonSFTP" class="form-control" id="pDaemonSFTP" value="2022" />
                         </div>
                         <div class="col-md-12">
-                            <p class="text-muted small">The daemon runs its own SFTP management container and does not use the SSHd process on the main physical server. <Strong>Do not use the same port that you have assigned for your physical server's SSH process.</strong> If you will be running the daemon behind CloudFlare&reg; you should set the daemon port to <code>8443</code> to allow websocket proxying over SSL.</p>
+                            <p class="text-muted small">守护程序运行其自己的SFTP管理容器，并且不在主物理服务器上使用SSHd进程。<Strong>不要使用为物理服务器的SSH进程分配的端口。</strong>如果要在CloudFlare&reg;后面运行守护程序，则应将守护程序端口设置为<code>8443</code>，以允许通过SSL进行WebSocket代理。</p>
                         </div>
                     </div>
                 </div>

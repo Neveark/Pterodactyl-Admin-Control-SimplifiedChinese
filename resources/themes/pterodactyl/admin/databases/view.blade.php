@@ -34,12 +34,12 @@
                     <div class="form-group">
                         <label for="pHost" class="form-label">主机</label>
                         <input type="text" id="pHost" name="host" class="form-control" value="{{ old('host', $host->host) }}" />
-                        <p class="text-muted small">The IP address or FQDN that should be used when attempting to connect to this MySQL host <em>from the panel</em> to add new databases.</p>
+                        <p class="text-muted small">尝试从<em>面板</em>连接到此MySQL主机以添加新数据库时应使用的IP地址或FQDN。</p>
                     </div>
                     <div class="form-group">
                         <label for="pPort" class="form-label">端口</label>
                         <input type="text" id="pPort" name="port" class="form-control" value="{{ old('port', $host->port) }}" />
-                        <p class="text-muted small">The port that MySQL is running on for this host.</p>
+                        <p class="text-muted small">MySQL在此主机上运行的端口。</p>
                     </div>
                     <div class="form-group">
                         <label for="pNodeId" class="form-label">连接的节点</label>
@@ -53,7 +53,7 @@
                                 </optgroup>
                             @endforeach
                         </select>
-                        <p class="text-muted small">This setting does nothing other than default to this database host when adding a database to a server on the selected node.</p>
+                        <p class="text-muted small">在将数据库添加到所选节点上的服务器时，此设置除了对该数据库主机的默认设置外没有任何作用。</p>
                     </div>
                 </div>
             </div>
@@ -67,19 +67,19 @@
                     <div class="form-group">
                         <label for="pUsername" class="form-label">用户名</label>
                         <input type="text" name="username" id="pUsername" class="form-control" value="{{ old('username', $host->username) }}" />
-                        <p class="text-muted small">The username of an account that has enough permissions to create new users and databases on the system.</p>
+                        <p class="text-muted small">具有足够权限在系统上创建新用户和数据库的帐户的用户名。</p>
                     </div>
                     <div class="form-group">
                         <label for="pPassword" class="form-label">密码</label>
                         <input type="password" name="password" id="pPassword" class="form-control" />
-                        <p class="text-muted small">The password to the account defined. Leave blank to continue using the assigned password.</p>
+                        <p class="text-muted small">所定义帐户的密码。保留空白以继续使用之前指定的密码。</p>
                     </div>
                     <hr />
-                    <p class="text-danger small text-left">The account defined for this database host <strong>must</strong> have the <code>WITH GRANT OPTION</code> permission. If the defined account does not have this permission requests to create databases <em>will</em> fail. <strong>Do not use the same account details for MySQL that you have defined for this panel.</strong></p>
+                    <p class="text-danger small text-left">为此数据库主机指定的账户<strong>必须</strong>拥有<code>WITH GRANT OPTION</code>权限。如果定义的帐户没有此权限，则创建数据库的请求将失败。 <strong>请勿为该面板使用与使用MySQL时使用的相同的帐户详细信息。</strong></p>
                 </div>
                 <div class="box-footer">
                     {!! csrf_field() !!}
-                    <button name="_method" value="PATCH" class="btn btn-sm btn-primary pull-right">Save</button>
+                    <button name="_method" value="PATCH" class="btn btn-sm btn-primary pull-right">保存</button>
                     <button name="_method" value="DELETE" class="btn btn-sm btn-danger pull-left muted muted-hover"><i class="fa fa-trash-o"></i></button>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                             <td class="middle">{{ $database->remote }}</td>
                             <td class="text-center">
                                 <a href="{{ route('admin.servers.view.database', $database->getRelation('server')->id) }}">
-                                    <button class="btn btn-xs btn-primary">Manage</button>
+                                    <button class="btn btn-xs btn-primary">管理</button>
                                 </a>
                             </td>
                         </tr>
