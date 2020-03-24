@@ -24,7 +24,7 @@
             <div class="box-header with-border">
                 <h3 class="box-title">地域列表</h3>
                 <div class="box-tools">
-                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#newLocationModal">Create New</button>
+                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#newLocationModal">创建新的</button>
                 </div>
             </div>
             <div class="box-body table-responsive no-padding">

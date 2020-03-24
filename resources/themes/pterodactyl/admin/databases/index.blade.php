@@ -24,7 +24,7 @@
             <div class="box-header with-border">
                 <h3 class="box-title">主机列表</h3>
                 <div class="box-tools">
-                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#newHostModal">Create New</button>
+                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#newHostModal">创建新的</button>
                 </div>
             </div>
             <div class="box-body table-responsive no-padding">
@@ -112,11 +112,11 @@
                                 </optgroup>
                             @endforeach
                         </select>
-                        <p class="text-muted small">This setting does nothing other than default to this database host when adding a database to a server on the selected node.</p>
+                        <p class="text-muted small">在将数据库添加到所选节点上的服务器时，此设置除了对该数据库主机的默认设置外没有任何作用。</p>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <p class="text-danger small text-left">The account defined for this database host <strong>must</strong> have the <code>WITH GRANT OPTION</code> permission. If the defined account does not have this permission requests to create databases <em>will</em> fail. <strong>Do not use the same account details for MySQL that you have defined for this panel.</strong></p>
+                    <p class="text-danger small text-left">为此数据库主机指定的账户<strong>必须</strong>拥有<code>WITH GRANT OPTION</code>权限。如果定义的帐户没有此权限，则创建数据库的请求将失败。 <strong>请勿为该面板使用与使用MySQL时使用的相同的帐户详细信息。</strong></p>
                     {!! csrf_field() !!}
                     <button type="button" class="btn btn-default btn-sm pull-left" data-dismiss="modal">取消</button>
                     <button type="submit" class="btn btn-success btn-sm">创建</button>
