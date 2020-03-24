@@ -2,7 +2,7 @@
 @include('partials/admin.settings.nav', ['activeTab' => 'basic'])
 
 @section('title')
-    Statistics Overview
+    统计总览
 @endsection
 
 @section('content-header')
@@ -48,7 +48,7 @@
         <div class="info-box bg-blue">
             <span class="info-box-icon"><i class="ion ion-stats-bars"></i></span>
             <div class="info-box-content number-info-box-content">
-                <span class="info-box-text">以MB为单位的总硬盘用量</span>
+                <span class="info-box-text">以MB为单位的总磁盘用量</span>
                 <span class="info-box-number">{{ $totalServerDisk }}MB</span>
             </div>
         </div>
@@ -81,7 +81,7 @@
         <div class="info-box bg-blue">
             <span class="info-box-icon"><i class="ion ion-stats-bars"></i></span>
             <div class="info-box-content number-info-box-content">
-                <span class="info-box-text">总硬盘空间</span>
+                <span class="info-box-text">总磁盘空间</span>
                 <span class="info-box-number">{{ $totalNodeDisk }}MB</span>
             </div>
         </div>

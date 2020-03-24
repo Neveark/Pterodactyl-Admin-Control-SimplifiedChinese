@@ -45,7 +45,7 @@
                         <label for="name" class="control-label">节点名称</label>
                         <div>
                             <input type="text" autocomplete="off" name="name" class="form-control" value="{{ old('name', $node->name) }}" />
-                            <p class="text-muted"><small>字符限制: <code>a-zA-Z0-9_.-</code> and <code>[Space]</code> (min 1, max 100 characters).</small></p>
+                            <p class="text-muted"><small>字符限制: <code>a-zA-Z0-9_.-</code>以及<code>[空格]</code> (最小 1, 最大 100 字符)。</small></p>
                         </div>
                     </div>
                     <div class="form-group col-xs-12">

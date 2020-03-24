@@ -6,14 +6,14 @@
 @extends('layouts.admin')
 
 @section('title')
-    Administration
+    管理
 @endsection
 
 @section('content-header')
     <h1>管理总览<small>快速浏览你的系统。</small></h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('admin.index') }}">管理</a></li>
-        <li class="active">Index</li>
+        <li class="active">首页</li>
     </ol>
 @endsection
 
